@@ -189,17 +189,10 @@ def create_triangulation(original_points):
 
 if __name__ == "__main__":
     fig, ax = plt.subplots()
-    points1 = [Point(0, 8.5), Point(8.2, 0), Point(8, 4), Point(14, 4), Point(19, 5.5), Point(3, 11), Point(7, 12),
-               Point(12, 11.5), Point(17, 9), Point(19, 5.5)]
     coords = [(35, 425), (123, 365), (240, 192), (480, 67), (512, 212), (671, 161), (897, 431), (800, 383), (674, 377),
               (553, 445), (454, 542), (374, 452), (266, 394), (344, 374)]
-    points2 = [Point(coord[0], coord[1]) for coord in coords]
-
-    draw_graph(create_triangulation(points1))
-    for point in points1:
-        plt.plot(point.x, point.y, 'ro')
-    plt.show()
-    draw_graph(create_triangulation(points2))
-    for point in points2:
+    points = [Point(coord[0], coord[1]) for coord in coords]
+    draw_graph(create_triangulation(points))
+    for point in points:
         plt.plot(point.x, point.y, 'ro')
     plt.show()
